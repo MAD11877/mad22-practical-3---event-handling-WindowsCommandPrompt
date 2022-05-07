@@ -39,34 +39,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop = "300px">
-            <!--Group 1 Text-->
-            <TextView
-                android:id = '@+id/firstImage'
-                android:layout_width = "match_parent"
-                android:layout_height = "match_parent"
-                android:text = "Group 1"
-                android:gravity = "center"
-                android:textSize = "150px"
-                android:visibility= "gone">
-            </TextView>
-            <!--The android face with background image-->
-            <RelativeLayout
-                android:layout_height = "match_parent"
-                android:layout_width = "match_parent"
-                android:gravity = "center"
-                android:id = "@+id/MainContainer"
-                android:visibility="gone">
-                <ImageView
-                    android:layout_height="550px"
-                    android:layout_width = "550px"
-                    android:src = "@drawable/ic_launcher_background">
-                </ImageView>
-                <ImageView
-                    android:layout_height = "550px"
-                    android:layout_width = "550px"
-                    android:src = "@drawable/ic_launcher_foreground">
-                </ImageView>
-            </RelativeLayout>
         </FrameLayout>
     </ScrollView> 
 </androidx.constraintlayout.widget.ConstraintLayout>
