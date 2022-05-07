@@ -24,18 +24,22 @@ public class ChallengeMessageGroup extends AppCompatActivity
         Button b1 = findViewById(R.id.group1Button);
         Button b2 = findViewById(R.id.group2Button);
 
-        RelativeLayout rl1 = findViewById(R.id.MainContainer);
-        TextView tl1 = findViewById(R.id.firstImage);
-
         //apply the appropriate event listener.
         b1.setOnClickListener(function -> {
-            rl1.setVisibility(function.GONE);
-            tl1.setVisibility(function.VISIBLE);
+            controller(new f1()); 
         });
 
         b2.setOnClickListener(function -> {
-            tl1.setVisibility(function.GONE);
-            rl1.setVisibility(function.VISIBLE);
+            controller(new f2()); 
         });
+    }
+    
+    protected void controller(Fragment balloon){
+        //now we will need to connect these 'balloons' to a 'pump controller' which will controls the inflation
+        //and deflation of the 'balloons' separately...
+        FragmentManager pumpMachine = getSupportFragmentManager();
+        FragmentTransaction inflationProcess = pumpMachine.beginTransaction();
+        inflationProcess.replace(R.id.toggling, balloon);
+        inflationProcess.commit();
     }
 }
